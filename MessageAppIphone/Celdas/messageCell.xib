@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="120" id="KGk-i7-Jjw" customClass="messageCell" customModule="MessageAppIphone" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="359" height="120"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="359" height="120"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GKQ-u6-xwL">
+                        <rect key="frame" x="33" y="10" width="264" height="60"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="chevron.right" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="LWK-Gn-zqf">
+                        <rect key="frame" x="313" y="47" width="30" height="26.5"/>
+                        <color key="tintColor" red="0.66422420739999999" green="0.66424006219999998" blue="0.66423153879999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="30" id="1rS-Z9-TaQ"/>
+                            <constraint firstAttribute="width" constant="30" id="QDO-Xe-YDF"/>
+                        </constraints>
+                    </imageView>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="beS-BQ-6yQ">
+                        <rect key="frame" x="39" y="80" width="194" height="30"/>
+                        <color key="backgroundColor" systemColor="tertiarySystemGroupedBackgroundColor" red="0.94901960780000005" green="0.94901960780000005" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="30" id="dN0-aj-0yU"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                        <state key="normal" title="X Dismiss message">
+                            <color key="titleColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        </state>
+                        <connections>
+                            <action selector="dismissButtonAction:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="Lxx-7J-3gy"/>
+                        </connections>
+                    </button>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="circle.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="TOJ-88-OrT">
+                        <rect key="frame" x="8" y="16.5" width="15" height="14"/>
+                        <color key="tintColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="15" id="4de-ao-xUx"/>
+                            <constraint firstAttribute="width" constant="15" id="qcE-JC-1V4"/>
+                        </constraints>
+                    </imageView>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="LWK-Gn-zqf" firstAttribute="leading" secondItem="GKQ-u6-xwL" secondAttribute="trailing" constant="16" id="1Gs-eI-nec"/>
+                    <constraint firstItem="TOJ-88-OrT" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="16" id="5m9-ca-6ZK"/>
+                    <constraint firstItem="LWK-Gn-zqf" firstAttribute="leading" secondItem="beS-BQ-6yQ" secondAttribute="trailing" constant="80" id="5we-Ql-DLT"/>
+                    <constraint firstItem="GKQ-u6-xwL" firstAttribute="leading" secondItem="TOJ-88-OrT" secondAttribute="trailing" constant="10" id="KCr-yb-sdQ"/>
+                    <constraint firstAttribute="trailing" secondItem="LWK-Gn-zqf" secondAttribute="trailing" constant="16" id="MpT-G4-gaW"/>
+                    <constraint firstItem="GKQ-u6-xwL" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="10" id="SCm-XL-wd2"/>
+                    <constraint firstItem="TOJ-88-OrT" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="8" id="Sis-hl-aa5"/>
+                    <constraint firstItem="beS-BQ-6yQ" firstAttribute="leading" secondItem="TOJ-88-OrT" secondAttribute="trailing" constant="16" id="e0j-vF-ECg"/>
+                    <constraint firstAttribute="bottom" secondItem="beS-BQ-6yQ" secondAttribute="bottom" constant="10" id="eKg-Pt-LWW"/>
+                    <constraint firstItem="beS-BQ-6yQ" firstAttribute="top" secondItem="GKQ-u6-xwL" secondAttribute="bottom" constant="10" id="jyJ-VO-nE5"/>
+                    <constraint firstItem="LWK-Gn-zqf" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="lbB-yR-cZ0"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="dismissButton" destination="beS-BQ-6yQ" id="mpa-sw-M3v"/>
+                <outlet property="message" destination="GKQ-u6-xwL" id="eya-Vk-dJH"/>
+                <outlet property="readImage" destination="TOJ-88-OrT" id="zHr-Mk-f4k"/>
+            </connections>
+            <point key="canvasLocation" x="157.24637681159422" y="178.79464285714286"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="chevron.right" catalog="system" width="48" height="64"/>
+        <image name="circle.fill" catalog="system" width="64" height="60"/>
+    </resources>
+</document>
